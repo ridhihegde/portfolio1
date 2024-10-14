@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ridhi R Hegde's Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #c9d60d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form input, form textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+        }
+
+        form input[type="submit"] {
+            background-color: #16fac9;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Notification styling */
+        #notification {
+            display: none;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4caf50;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Ridhi R Hegde</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Ridhi R Hegde, a passionate developer with a focus on creating innovative solutions that address real-world challenges.</p>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Here are some of my projects:</p>
+        <div class="project-placeholder">
+            <p>Project 1 - Smart Parking System</p>
+        </div>
+        <div class="project-placeholder">
+            <p>Project 2 - Transaction Management system</p>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Send Message">
+        </form>
+
+        <!-- Notification after sending the message -->
+        <div id="notification">Your message has been sent!</div>
+    </section>
+
+    <script>
+        // Form submission handling
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from actually submitting
+            document.getElementById("notification").style.display = "block"; // Show the notification
+        });
+    </script>
+
+</body>
+</html>
